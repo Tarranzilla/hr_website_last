@@ -1,69 +1,121 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+    border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
 }
+
+/* Styles for screens wider than 1080px (full HD) */
+@media screen and (min-width: 1080px) {
+    /* Add your CSS styles for large screens here */
+}
+
+/* Styles for screens between 768px and 1080px (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+    /* Add your CSS styles for tablets here */
+}
+
+/* Styles for screens smaller than 768px (mobile devices) */
+@media screen and (max-width: 767px) {
+    /* Add your CSS styles for mobile devices here */
+}
+
+/*
+
+For responsive images, use the srcset attribute in HTML to provide 
+different image sources for different screen sizes and resolutions.
+
+<img src="default-image.jpg" 
+     srcset="image1.jpg 1x, image2.jpg 2x, image3.jpg 3x" 
+     sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw"
+     alt="Description of the image">
+
+src: This is the default image source for browsers that do not support srcset.
+srcset: Here, you list the image sources along with their descriptors (e.g., 1x, 2x, 3x). 
+
+The descriptors indicate the pixel density or resolution of each image. Browsers use this 
+information to select the most appropriate image based on the device's screen resolution.
+
+sizes (optional but recommended): This attribute defines the sizes of the image element relative 
+to the viewport width. It helps the browser decide which image source to fetch based on the viewport 
+size. You can customize this based on your layout and design. In the example above, it specifies 
+three different sizes for the image.
+
+This helps reduce the load time on smaller screens while 
+delivering higher-resolution images to larger screens.
+
+Consider using responsive typography techniques such as fluid typography, 
+where font sizes scale proportionally with the viewport size.
+
+Combining vw and vh can be effective when you want to create typography that 
+responds to both the width and height of the viewport simultaneously.
+
+For instance, you could use font-size: 4vw 3vh; to set the font size based on 
+both the width and height. The first value (4vw) would adjust the font size 
+based on the viewport width, and the second value (3vh) would adjust it based 
+on the viewport height.
+
+*/
